@@ -12,7 +12,7 @@ body {
 .icon {
 	width: 22px;
 	border-radius: 2px;
-	filter: grayscale(100%);
+	filter: grayscale(50%);
 }
 
 .card {
