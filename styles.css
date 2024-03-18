@@ -5,7 +5,9 @@ body {
 }
 
 .avatar {
-	width: 175px;
+	width: 100%;
+	max-width: 150px;
+	height: auto;
 	border-radius: 10px;
 }
 
