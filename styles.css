@@ -5,16 +5,18 @@ body {
 }
 
 .avatar {
-	width: 150px;
+	width: 155px;
 	border-radius: 10px;
 }
 
 .icon {
 	width: 22px;
+	border-radius: 2px;
+	filter: grayscale(100%);
 }
 
 .card {
-	width:560px;
+	width:565px;
 	margin: 0 auto;
 	background: #f0f0f0;
 	display: flex;
@@ -33,11 +35,22 @@ body {
 	font-weight: bold;
 }
 
-.centered-nav {
-	text-align: center;
-	margin-top: 25px;
-}
-
 .post-title {
 	margin-bottom: -8px;
+}
+
+.centered-nav {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.centered-nav a {
+    color: #121212;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.centered-nav a:not(:last-child)::after {
+    content: '|';
+    margin-left: 5px;
 }
