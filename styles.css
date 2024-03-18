@@ -5,9 +5,12 @@ body {
 }
 
 .avatar {
-	max-width: 100%;
+	max-width: 175px;
+	max-height: 175px;
+	width: auto;
 	height: auto;
 	border-radius: 10px;
+	margin-top: 20px;
 }
 
 .icon {
