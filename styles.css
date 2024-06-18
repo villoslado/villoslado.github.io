@@ -1,7 +1,34 @@
 body {
-	font-family: Helvetica Neue, Arial, sans-serif;
+	font-family: Helvetica, sans-serif;
 	color: #121212;
-	margin:20px;
+	padding: 1%;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+.website-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    color: #FFFAFA;
+    padding: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+@media (max-width: 768px) {
+    .website-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.logo {
+	font-weight: 600;
+    font-size: 22px;
 }
 
 h1 {
