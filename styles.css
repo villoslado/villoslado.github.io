@@ -97,3 +97,12 @@ h2 {
     content: '|';
     margin-left: 5px;
 }
+
+footer {
+    padding: 16px;
+    font-weight: 500;
+    background-color: rgb(162, 40, 30);
+    color: #FFFAFA;
+    margin-top: 50px;
+    text-align: left;
+}
