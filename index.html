@@ -15,6 +15,7 @@
         .navbar { background-color: #111; font-family: 'Poppins', sans-serif; }
         .navbar-brand { font-weight: 600; color: #fff; }
         .navbar-nav .nav-link { font-weight: 400; color: #fff; }
+        .navbar-nav .nav-link:hover { text-decoration: none; }
         .hero {
             position: relative;
             padding: 100px 0;
@@ -40,10 +41,39 @@
         .hero h1 { font-size: 3em; color: #fff; font-family: 'Poppins', sans-serif; }
         .hero p { font-size: 1.2em; color: #fff; font-family: 'Poppins', sans-serif; }
         .features { padding: 50px 0; }
-        .features .feature-box { padding: 20px; border-radius: 10px; background: #222; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-family: 'Poppins', sans-serif; }
-        .features .feature-box img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px 10px 0 0; margin-bottom: 15px; }
-        .features .feature-box h3 { color: #fff; }
-        .features .feature-box p { color: #bbb; font-family: 'Poppins', sans-serif; }
+        .features .feature-box {
+            position: relative;
+            border-radius: 10px;
+            background: url('images/developer-setup.webp') center center / cover no-repeat;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .features .feature-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .features .feature-box .content {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .features .feature-box h3 {
+            font-size: 1.5em;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+        .features .feature-box p {
+            font-size: 1em;
+            color: #bbb;
+            font-family: 'Poppins', sans-serif;
+        }
         </style>
     </head>
     <body>
@@ -61,19 +91,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.github.com/villoslado">github</a>
+                        <a class="nav-link"
+                           href="https://www.github.com/villoslado"
+                           target="_blank">github</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/villoslado">linkedin</a>
+                        <a class="nav-link"
+                           href="https://www.linkedin.com/in/villoslado"
+                           target="_blank">linkedin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mailto:gvilloslado@lexico.ai">contact</a>
+                        <a class="nav-link" href="mailto:gvilloslado@lexico.ai" target="_blank">contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="hero">
             <div class="container">
+                <h1>Bienvenido</h1>
                 <p>
                     Here we share the projects we're currently engaged in and explore new learnings. It's all about experimenting, building, and growing together.
                 </p>
@@ -83,23 +118,28 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="feature-box">
-                        <img src="images/unitycrm.png" class="img-fluid" alt="legacy">
-                        <h3>Unity CRM</h3>
-                        <p>We're co-developing a simple, accessible CRM for small- and medium-sized enterprises.</p>
+                        <div class="content">
+                            <h3>Unity CRM</h3>
+                            <p>We're co-developing a simple, accessible CRM for small- and medium-sized enterprises.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-box">
-                        <img src="images/prototype.png" class="img-fluid" alt="webapp">
-                        <h3>SlabShow</h3>
-                        <p>Card collectors still rely on unsophisticated spreadsheets. We're creating an elegant solution.</p>
+                        <div class="content">
+                            <h3>SlabShow</h3>
+                            <p>
+                                Many card collectors still rely on unsophisticated spreadsheets to manage their portfolios. We're creating a smart, elegant, and straightforward solution.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-box">
-                        <img src="images/ecosystem.png" class="img-fluid" alt="collaborate">
-                        <h3>GenAI Primer</h3>
-                        <p>Capturing insights and advancements in Generative AI and its evolving landscape.</p>
+                        <div class="content">
+                            <h3>GenAI Primer</h3>
+                            <p>Capturing insights and advancements in Generative AI and its evolving landscape.</p>
+                        </div>
                     </div>
                 </div>
             </div>
